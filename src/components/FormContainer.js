@@ -1,48 +1,57 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ContractForm, GenerateEstimate, LandlordForm, PaymentForm, PropertyForm, Summary, TenantForm } from "./FormComponent";
 
-const FormContainer = () => {
-  const [formInformations, setFormInformations] = useState({
-    ContractDetails: '',
-    LandlordDetails: '',
-    PaymentDetails: '',
-    PropertyDetails: '',
-    TenantDetails: '',
-    ContractDetails: '',
-    ContractDetails: '',
-    ContractDetails: '',
-  });
-
-  const [step, setstep] = useState(1);
+const FormContainer = ({ step, setFormInformations, formInformations,}) => {
 
   switch (step) {
-    case 1:
+    case 1: 
         return (
-            <GenerateEstimate />
+            <GenerateEstimate
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 2:
         return (
-            <PropertyForm />
+            <PropertyForm
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 3:
         return (
-            <LandlordForm />
+            <LandlordForm
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 4:
         return (
-            <TenantForm />
+            <TenantForm
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 5:
         return (
-            <ContractForm />
+            <ContractForm
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 6:
         return (
-            <PaymentForm />
+            <PaymentForm
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     case 7:
         return (
-            <Summary />
+            <Summary
+            formInformations={formInformations}
+            setFormInformations={setFormInformations}
+            />
         )
     default:
         break;

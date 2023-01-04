@@ -2,7 +2,9 @@ import React from 'react'
 
 const GenerateEstimate = () => {
   return (
-    <div>GenerateEstimate</div>
+    <div>
+      <h1>Generate Estimate</h1>
+    </div>
   )
 }
 
