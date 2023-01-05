@@ -1,11 +1,12 @@
 import React from 'react'
 import { TextField } from '@mui/material'
 
-const TenantForm = ({setFormInformations, formInformations}) => {
+const TenantForm = ({setFormInformations, formInformations, handleSubmit}) => {
   return (
-    <div>
-      <h3>Tenant Details</h3>
-      <div>
+    <div className="mt-8 flex flex-col items-center lg:items-start">
+      <h3 className=" font-semibold">Tenant Details</h3>
+      <div className=" my-3">
+      <form id={4} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4">
       <TextField
           required
           id="outlined-helperText-multiline-flexible"
@@ -20,6 +21,7 @@ const TenantForm = ({setFormInformations, formInformations}) => {
           // defaultValue="Default Value"
           helperText="Enter Property Details"
         />
+        </form>
       </div>
     </div>
   )

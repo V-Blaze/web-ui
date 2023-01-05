@@ -1,11 +1,12 @@
 import { TextField } from '@mui/material'
 import React from 'react'
 
-const ContractForm = ({setFormInformations, formInformations}) => {
+const ContractForm = ({setFormInformations, formInformations, handleSubmit}) => {
   return (
-    <div>
-      <h3>Contract Details</h3>
-      <div>
+    <div className="mt-8 flex flex-col items-center lg:items-start">
+      <h3 className=" font-semibold">Contract Details</h3>
+      <div className=" my-3">
+      <form id={5} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4">
       <TextField
           required
           id="outlined-helperText-multiline-flexible"
@@ -20,6 +21,7 @@ const ContractForm = ({setFormInformations, formInformations}) => {
           // defaultValue="Default Value"
           helperText="Enter Property Details"
         />
+        </form>
       </div>
     </div>
   )

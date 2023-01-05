@@ -1,7 +1,7 @@
 import React from 'react'
 import { ContractForm, GenerateEstimate, LandlordForm, PaymentForm, PropertyForm, Summary, TenantForm } from "./FormComponent";
 
-const FormContainer = ({ step, setFormInformations, formInformations,}) => {
+const FormContainer = ({ step, setFormInformations, formInformations, handleSubmit}) => {
 
   switch (step) {
     case 1: 
@@ -9,6 +9,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <GenerateEstimate
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 2:
@@ -16,6 +17,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <PropertyForm
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 3:
@@ -23,6 +25,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <LandlordForm
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 4:
@@ -30,6 +33,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <TenantForm
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 5:
@@ -37,6 +41,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <ContractForm
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 6:
@@ -44,6 +49,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <PaymentForm
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     case 7:
@@ -51,6 +57,7 @@ const FormContainer = ({ step, setFormInformations, formInformations,}) => {
             <Summary
             formInformations={formInformations}
             setFormInformations={setFormInformations}
+            handleSubmit={handleSubmit}
             />
         )
     default:
