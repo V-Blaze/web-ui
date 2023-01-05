@@ -54,8 +54,8 @@ const App = () => {
       <div className=" bg-[#f7f8fa] px-[3%] lg:px-[10%]  pt-[5%]">
         <div className="bg-white rounded-t-xl p-6 flex flex-col">
           <div className=" flex justify-center items-center">
-              <div className=" border-b grid grid-cols-1 lg:grid-cols-3 align-middle">
-                  <button type='button' onClick={() => handlePrev()} className="flex lg:self-start gap-1 lg:mr-[3%]">
+              <div className=" border-b grid grid-cols-1 lg:grid-cols-3">
+                  <button type='button' onClick={() => handlePrev()} className="flex lg:self-start gap-1 lg:mr-[3%] items-center">
                     <AiOutlineArrowLeft />
                     <span className=" underline">Go back</span>
                   </button>
