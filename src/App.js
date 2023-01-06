@@ -18,8 +18,19 @@ const App = () => {
     landlordDetails: '',
     paymentMode: '',
     paymentAmount: '',
-    propertyDetails: '',
     tenantDetails: '',
+    propertyDetails: {
+      floorNumber: '',
+      BHK: '',
+      typeOfProperty: '',
+      officeNumber: 0,
+      buildingName: '',
+      noOfBathrooms: 0,
+      pincode: '',
+      locality: '',
+      district: '',
+      state: '',
+    }
   });
   const forms = {
     1: 'Generate Estimate', 2: 'Property Details', 3: 'Landlord Details', 4: 'Tenant Details', 5: 'Contract Details', 6: 'Payment Details', 7: 'Summary'
@@ -51,7 +62,7 @@ const App = () => {
       <div className="flex items-center justify-center mb-4 ">
         <Navbar />
       </div>
-      <div className=" bg-[#f7f8fa] px-[3%] lg:px-[10%]  pt-[5%]">
+      <div className=" bg-[#f7f8fa] px-[3%] lg:px-[6%]  pt-[5%]">
         <div className="bg-white rounded-t-xl p-6 flex flex-col">
           <div className=" flex justify-center items-center">
               <div className=" border-b grid grid-cols-1 lg:grid-cols-3">
@@ -67,7 +78,7 @@ const App = () => {
               </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3">
-              <div className="hidden lg:flex lg:mt-4">
+              <div className="hidden lg:flex lg:mt-4 self-start">
                   <ul className=" flex flex-row lg:flex-col justify-center gap-4 lg:w-60">
                       
                       <li className="list-item"><span>Generate Estimate</span>
@@ -122,11 +133,11 @@ const App = () => {
                 />
               </div>
           </div>
-          <div className=" self-end w-[70%] ">
+          <div className=" self-end w-[70%]">
             <div className="flex justify-between items-center">
               <span className=" font-bold">Total: ₹470 </span>
-              <button type='submit' form={step} 
-                className=" self-end w-fit bg-black text-white h-8 px-3 rounded-lg mt-4"
+              <button type='submit'  form={step}
+                className=" self-end w-fit bg-black text-white h-12 px-3 rounded-lg mt-4"
                 >Save and Continue
               </button>
             </div>
