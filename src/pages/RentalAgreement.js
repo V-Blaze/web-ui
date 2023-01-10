@@ -8,9 +8,17 @@ import { HiOutlineUserGroup, HiOutlineDocumentText } from "react-icons/hi";
 import {IoCallOutline} from "react-icons/io5";
 
 const RentalAgreement = () => {
-  const [step, setstep] = useState(4);
+  const [step, setstep] = useState(1);
   const [currentForm, setCurrentForm] = useState('Payment Details');
   const [formInformations, setFormInformations] = useState({
+    generalEstimate: {
+      stampPaperAmount: '',
+      agreementStartDate: '',
+      partyType: 'owner',
+      notorisedAgreement: false,
+      E_signAgreement: 0,
+      doorStepDelivery: false,
+    },
     contractDetails: '',
     landlordDetails: '',
     paymentMode: '',
