@@ -19,7 +19,17 @@ const RentalAgreement = () => {
       E_signAgreement: 0,
       doorStepDelivery: false,
     },
-    contractDetails: '',
+    contractDetails: {
+      agreementDuration: '',
+      agreementStartDate: '',
+      rentAmount: '',
+      RefundableDeposit: '',
+      nonRefundableDeposit: '',
+      minimumLockingPeriod: '',
+      rentDay: '',
+      noticePeriod: '',
+      miscellaneous: ''
+    },
     landlordDetails: '',
     paymentMode: '',
     paymentAmount: '',
