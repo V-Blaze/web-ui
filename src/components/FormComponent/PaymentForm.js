@@ -22,7 +22,7 @@ const PaymentForm = ({setFormInformations, formInformations, handleSubmit}) => {
   ];
   return (
     <div className="mt-8 flex flex-col gap-3 ">
-      <form id={6} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4">
+      <form id={6} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col px-4 gap-4">
       <div className="flex flex-col">
         <span>Deposit Method Mode <span className=" text-red-500">*</span></span>
         <TextField

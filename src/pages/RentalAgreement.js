@@ -89,68 +89,68 @@ const RentalAgreement = () => {
         <RentalNavbar />
       </div>
       <div className=" bg-[#f7f8fa] px-[3%] lg:px-[6%]  pt-[5%]">
-        <div className="bg-white rounded-t-xl p-6 flex flex-col">
+        <div className="lg:bg-white rounded-t-xl p-6 flex flex-col gap-8 lg:gap-0">
           <div className=" flex justify-center items-center">
-              <div className=" border-b grid grid-cols-1 lg:grid-cols-3">
+              <div className=" lg:border-b w-full grid grid-cols-1 lg:grid-cols-3">
                   <button type='button' onClick={() => handlePrev()} className="flex lg:self-start gap-1 lg:mr-[3%] items-center">
                     <AiOutlineArrowLeft />
                     <span className=" underline">Go back</span>
                   </button>
-                  <div className="col-span-2">
+                  <div className="hidden lg:block col-span-2">
                       <span className=" font-semibold">Step {step}/7</span>
                       <h3 className="font-bold text-2xl">{currentForm}</h3>
                       <span>Please fill in the following details below... there'll be some other details here later on.</span>
                   </div>
               </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3">
-              <div className="hidden lg:flex lg:mt-4 self-start">
-                  <ul className=" flex flex-row lg:flex-col justify-center gap-4 lg:w-60">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
+              <div className="bg-[#f7f8fa] lg:bg-white lg:flex lg:mt-4 flex justify-center items-center lg:self-start">
+                  <ul className=" flex flex-row flex-shrink lg:flex-col justify-center gap-4 lg:w-60">
                       
-                      <li className="list-item"><span>Generate Estimate</span>
+                      <li className="list-item"><span className={step >= 1 ? 'font-bold lg:font-normal' : ''}>Generate Estimate</span>
                       <span className={step >= 1 ? 'icon-span' : 'icon-span-active'}>
                         <TbCurrencyRupee className={step >= 1 ? 'text-white' : 'text-black'}  />
                         </span>
                         <span className={step >= 1 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Property Details</span>
+                      <li className="list-item"><span className={step >= 2 ? 'font-bold lg:font-normal' : ''}>Property Details</span>
                       <span  className={step >= 2 ? 'icon-span' : 'icon-span-active'}>
                         <GiGreenhouse className={step >= 2 && 'text-white'}  />
                         </span>
                         <span className={step >= 2 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Landlord Details</span>
+                      <li className="list-item"><span className={step >= 3 ? 'font-bold lg:font-normal' : ''}>Landlord Details</span>
                       <span className={step >= 3 ? 'icon-span' : 'icon-span-active'}>
                         <TbListDetails className={step >= 3 && 'text-white'}  />
                         </span>
                         <span className={step >= 3 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Tenant Details </span>
+                      <li className="list-item"><span className={step >= 4 ? 'font-bold lg:font-normal' : ''}>Tenant Details </span>
                       <span className={step >= 4 ? 'icon-span' : 'icon-span-active'}>
                         <HiOutlineUserGroup className={step >= 4 && 'text-white'}  />
                         </span>
                         <span className={step >= 4 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Contract Details</span>
+                      <li className="list-item"><span className={step >= 5 ? 'font-bold lg:font-normal' : ''}>Contract Details</span>
                       <span className={step >= 5 ? 'icon-span' : 'icon-span-active'}>
                         <IoCallOutline className={step >= 5 && 'text-white'}  />
                         </span>
                         <span className={step >= 5 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Payment Details</span>
+                      <li className="list-item"><span className={step >= 6 ? 'font-bold lg:font-normal' : ''}>Payment Details</span>
                       <span className={step >= 6 ? 'icon-span' : 'icon-span-active'}>
                         <TbCurrencyRupee className={step >= 6 && 'text-white'}  />
                         </span >
                         <span className={step >= 6 ? "progress-span bg-black" : 'progress-span'}></span></li>
                       
-                      <li className="list-item"><span>Summary</span>
+                      <li className="list-item"><span className={step >= 7 ? 'font-bold lg:font-normal' : ''}>Summary</span>
                       <span className={step >= 7 ? 'icon-span' : 'icon-span-active'}>
                         <HiOutlineDocumentText className={step >= 7 && 'text-white'}  />
                         </span>
                         <span className={step >= 7 ? "progress-span bg-black" : 'progress-span'}></span></li>
                   </ul>
               </div>
-              <div className="col-span-2">
+              <div className="col-span-2 bg-white rounded-lg">
                 <FormContainer
                   step={step}
                   setFormInformations={setFormInformations}

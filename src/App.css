@@ -11,6 +11,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 .list-2 {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,11 @@
   display: grid;
   grid-template-columns: 100%;
   align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 0.5rem;
+  line-height: 0.8rem;
+  /* margin: auto; */
 }
 
 .icon-span {
@@ -33,6 +39,7 @@
   justify-content: center;
   align-items: center;
   background-color: #000;
+  order: -1;
 }
 .icon-span-active {
   border: 1px solid black;
@@ -43,11 +50,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  order: -1;
   /* background: #000; */
 }
 
 .progress-span {
-  /* background-color: black; */
+  display: none;
   height: 1rem;
   width: 1rem;
   border: solid black 1px;
@@ -64,6 +72,7 @@
   overflow: hidden !important;
   /* white-space: nowrap !important; */
   text-overflow: ellipsis !important;
+  font-size: 0.7rem !important;
 }
 
 .floor-btn-active {
@@ -100,20 +109,30 @@
 }
 
 @media (min-width: 1024px) {
+  .progress-span {
+    display: block;
+  }
+
   .list-item {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  text-align: start;
+  justify-items: start;
+  font-size: 1rem;
+  line-height: 1.2rem;
   /* width: 11rem; */
   }
 
   .icon-span {
     width: 2.5rem;
     height: 2.5rem;
+    order: 0;
   }
 
   .icon-span-active {
     width: 2.5rem;
     height: 2.5rem;
+    order: 0;
   }
 
   .floor-btn {

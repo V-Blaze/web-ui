@@ -35,7 +35,7 @@ const ContractForm = ({setFormInformations, formInformations, handleSubmit}) => 
     <div className="mt-8 flex flex-col items-center lg:items-start">
       {/* <h3 className=" font-semibold">Property Details</h3> */}
       <div className=" my-2 w-full">
-        <form id={5} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4 w-full  px-10 lg:px-0">
+        <form id={5} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4 w-full  px-4 lg:px-0">
           <div className="flex flex-col gap-2 font-semibold">
             <span>Agreement Duration (in months)</span>
             <div className='flex gap-2 lg:gap-4'>

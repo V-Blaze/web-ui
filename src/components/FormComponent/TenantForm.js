@@ -46,7 +46,7 @@ const TenantForm = ({setFormInformations, formInformations, handleSubmit}) => {
   <div className="mt-8 flex flex-col items-center lg:items-start">
     {/* <h3 className=" font-semibold">Property Details</h3> */}
     <div className=" my-2 w-full">
-      <form id={4} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4 w-full  px-10 lg:px-0">
+      <form id={4} onSubmit={ (e) => handleSubmit(e)} className="flex flex-col gap-4 w-full  px-4 lg:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
           <div className="flex flex-col gap-2">
             <span>Party Type <span className=" text-red-500">*</span></span>
